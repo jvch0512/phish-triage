@@ -1,0 +1,17 @@
+{
+  "name": "phish-triage",
+  "version": "1.0.0",
+  "description": "Offline phishing e-mail triage: headers, SPF/DKIM/DMARC, links, attachments and an explainable verdict",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "phish-triage": "dist/src/cli.js" },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/src/server-main.js",
+    "test": "tsc && node --test dist/test/*.test.js"
+  },
+  "repository": "github:jvch0512/phish-triage",
+  "keywords": ["phishing", "email", "dfir", "soc", "blue-team", "typescript"],
+  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.6.0" },
+  "engines": { "node": ">=20" }
+}

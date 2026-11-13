@@ -1,0 +1,19 @@
+Received: from mta1.news.vendor.example (mta1.news.vendor.example [203.0.113.10]) by mx.acme-corp.example with ESMTPS; Wed, 04 Nov 2026 09:00:01 +0100
+Authentication-Results: mx.acme-corp.example; spf=pass smtp.mailfrom=news.vendor.example; dkim=pass header.d=vendor.example; dmarc=pass header.from=vendor.example
+Return-Path: <bounce@news.vendor.example>
+From: "Vendor News" <news@vendor.example>
+To: ana.garcia@acme-corp.example
+Subject: Your November product update
+Date: Wed, 04 Nov 2026 09:00:00 +0100
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="alt"
+
+--alt
+Content-Type: text/plain; charset=utf-8
+
+Hi, here is what shipped in November. Read more at https://www.vendor.example/blog/november
+--alt
+Content-Type: text/html; charset=utf-8
+
+<p>Hi, here is what shipped in November. <a href="https://www.vendor.example/blog/november">Read more</a></p>
+--alt--

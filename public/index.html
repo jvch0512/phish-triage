@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>phish-triage</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>phish-triage</h1>
+    <p class="sub">Paste the raw source of a suspicious e-mail (.eml) and get an explainable verdict: SPF, DKIM and DMARC, spoofing, links, attachments and pressure language. Runs in this tab, nothing is uploaded and no link is opened.</p>
+  </div>
+  <div class="row"><button type="button" data-sample="phish-invoice.eml">Phishing sample</button><button type="button" data-sample="bec-ceo.eml">BEC sample</button><button type="button" data-sample="legit-newsletter.eml">Legit sample</button></div>
+</header>
+<main>
+  <div class="panel">
+    <h2>E-mail source</h2>
+    <input type="file" id="file" accept=".eml,.txt,message/rfc822">
+    <textarea id="eml" rows="16" spellcheck="false" placeholder="Paste headers and body here"></textarea>
+    <p class="hint">In Gmail use "Show original", in Outlook "View message source". Keep the Authentication-Results header: without it the verdict relies on content only.</p>
+  </div>
+  <div id="out"></div>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
