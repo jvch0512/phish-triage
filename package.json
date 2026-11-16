@@ -12,6 +12,6 @@
   },
   "repository": "github:jvch0512/phish-triage",
   "keywords": ["phishing", "email", "dfir", "soc", "blue-team", "typescript"],
-  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.6.0" },
+  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^7.0.2" },
   "engines": { "node": ">=20" }
 }
